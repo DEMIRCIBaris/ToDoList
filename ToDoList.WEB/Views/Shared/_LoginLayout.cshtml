@@ -1,0 +1,31 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+    <link href="~/loginTheme/fonts/icomoon/style.css" rel="stylesheet" />
+    <link href="~/loginTheme/css/style.css" rel="stylesheet" />
+    <link href="~/loginTheme/css/owl.carousel.min.css" rel="stylesheet" />
+    <!-- Bootstrap CSS -->
+    <link href="~/loginTheme/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- Style -->
+  
+
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <div>
+        @RenderBody()
+    </div>
+    <script src="~/loginTheme/js/jquery-3.3.1.min.js"></script>
+    <script src="~/loginTheme/js/popper.min.js"></script>
+    <script src="~/loginTheme/js/bootstrap.min.js"></script>
+    <script src="~/loginTheme/js/main.js"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

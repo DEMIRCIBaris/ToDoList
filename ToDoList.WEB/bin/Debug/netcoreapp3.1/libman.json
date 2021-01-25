@@ -1,0 +1,31 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "font-awesome@5.15.2",
+      "destination": "wwwroot/lib/fonts/",
+      "files": [ "css/all.min.css", "js/all.min.js" ]
+    },
+    {
+      "library": "alertify.js@0.3.11",
+      "destination": "wwwroot/lib/alertify/",
+      "files": [ "alertify.bootstrap.min.css", "alertify.core.min.css", "alertify.min.js" ]
+    },
+    {
+      "library": "moment.js@2.29.1",
+      "destination": "wwwroot/lib/time/",
+      "files": [ "moment.min.js" ]
+    },
+    {
+      "library": "moment-timezone@0.5.32",
+      "destination": "wwwroot/lib/time/",
+      "files": [ "moment-timezone-with-data-10-year-range.js" ]
+    },
+    {
+      "library": "tempusdominus-bootstrap-4@5.39.0",
+      "destination": "wwwroot/lib/time/",
+      "files": [ "css/tempusdominus-bootstrap-4.min.css", "js/tempusdominus-bootstrap-4.min.js" ]
+    }
+  ]
+}

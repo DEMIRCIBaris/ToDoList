@@ -1,0 +1,289 @@
+﻿@section Styles{
+    <link href="~/lib/full-calendar/core/main.css" rel="stylesheet" />
+    <link href="~/lib/full-calendar/daygrid/main.css" rel="stylesheet" />
+    <link href="~/lib/full-calendar/timegrid/main.css" rel="stylesheet" />
+    <link href="~/lib/full-calendar/bootstrap/main.css" rel="stylesheet" />
+    <link href="~/lib/time/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+}
+
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Sil</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <b id="eventTitle"></b> adlı etkinliği silmek istediğinizden emin misiniz?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+                <button type="button" id="btnDelete" class="btn btn-danger">Sil</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="addEvent" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Etkinlik Ekle</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form method="post">
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label class="form-label">Başlangıç Tarihi: </label>
+                            <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
+                                <input type="text" id="inputStartDate" class="form-control datetimepicker-input" data-target="#datetimepicker1" />
+                                <div class="input-group-append" data-target="#datetimepicker1" data-toggle="datetimepicker">
+                                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label class="form-label">Bitiş Tarihi: </label>
+                            <div class="input-group date" id="datetimepicker2" data-target-input="nearest">
+                                <input type="text" id="inputEndDate" class="form-control datetimepicker-input" data-target="#datetimepicker2" />
+                                <div class="input-group-append" data-target="#datetimepicker2" data-toggle="datetimepicker">
+                                    <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label class="form-label">Etkinlik Açıklaması :</label>
+                            <input type="text" class="form-control" id="inputTitle" />
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label class="form-label">İstersen Renk Seç :</label>
+                            <input type="color" class="form-control form-control-color" id="inputColor" value="#FF2424" title="Renk Seçiniz" />
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Kapat</button>
+                <button type="button" id="btnSave" class="btn btn-primary">Kaydet</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-body">
+        <div id="calendar"></div>
+    </div>
+</div>
+
+
+@section Scripts{
+
+    <script src="~/lib/time/moment.min.js"></script>
+    <script src="~/lib/time/moment-timezone-with-data-10-year-range.js"></script>
+
+    <script src="~/lib/full-calendar/core/main.js"></script>
+    <script src="~/lib/full-calendar/daygrid/main.js"></script>
+    <script src="~/lib/full-calendar/timegrid/main.js"></script>
+    <script src="~/lib/full-calendar/bootstrap/main.js"></script>
+    <script src="~/lib/full-calendar/interaction/main.js"></script>
+    <script src="~/lib/full-calendar/bundle/locales/tr.js"></script>
+
+    <script src="~/lib/full-calendar/moment/main.js"></script>
+    <script src="~/lib/full-calendar/moment-timezone/main.js"></script>
+
+    <script src="~/lib/time/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var calendarEl = document.getElementById('calendar');
+
+            var deletedEvent = null;
+
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                plugins: ["dayGrid", "timeGrid", "bootstrap", "interaction"],
+                themeSystem: "bootstrap",
+                locale: "tr",
+                header: {
+                    left: "prev, next, today",
+                    center: "title",
+                    right: "dayGridMonth, timeGridWeek, timeGridDay"
+                },
+                defaultView: "dayGridMonth",
+                showNonCurrentDates: false,
+                slotDuration: "00:30:00",
+                slotLabelInterval: "00:30:00",
+                slotLabelFormat: {
+                    hour: "2-digit",
+                    minute: "2-digit"
+                },
+                timezone: "Europe/Istanbul",
+                contentHeight: 600,
+                selectable: true,
+                editable: true,
+                select: function (info) {
+                    openAddModal(info);
+                    $("#addEvent").modal();
+                },
+                eventDrop: function (info) {
+                    var data = {
+                        Id: info.event.id,
+                        AppUserId: info.event.extendedProps.appUserId,
+                        Color: info.event.backgroundColor,
+                        StartDate: moment(info.event.start).format("DD/MM/YYYY HH:mm"),
+                        EndDate: moment(info.event.end).format("DD/MM/YYYY HH:mm"),
+                        Title: info.event.title
+                    };
+
+                    updateEvents(data);
+
+                },
+                eventResize: function (info) {
+                    var data = {
+                        Id: info.event.id,
+                        AppUserId: info.event.extendedProps.appUserId,
+                        Color: info.event.backgroundColor,
+                        StartDate: moment(info.event.start).format("DD/MM/YYYY HH:mm"),
+                        EndDate: moment(info.event.end).format("DD/MM/YYYY HH:mm"),
+                        Title: info.event.title
+                    };
+
+                    updateEvents(data);
+                },
+                eventClick: function (info) {
+
+                    var data = {
+                        Id: info.event.id,
+                        AppUserId: info.event.extendedProps.appUserId,
+                        Color: info.event.backgroundColor,
+                        StartDate: moment(info.event.start).format("DD/MM/YYYY HH:mm"),
+                        EndDate: moment(info.event.end).format("DD/MM/YYYY HH:mm"),
+                        Title: info.event.title
+                    };
+
+                    deletedEvent = data;
+
+                    var color = info.event.backgroundColor;
+                    var title = info.event.title;
+                    var titleInfo = "<span style='color:" + color + "'>" + title + "</span>"
+
+                    $("#eventTitle").html(titleInfo);
+                    $("#deleteModal").modal();
+                }
+
+            });
+
+            calendar.render();
+
+            getEvents();
+
+            $('#datetimepicker1,#datetimepicker2').datetimepicker({
+                format: "DD/MM/YYYY HH:mm"
+            });
+
+            function openAddModal(info) {
+                $("#inputStartDate").val(moment(info.start).format("DD/MM/YYYY HH:mm"));
+                $("#inputEndDate").val(moment(info.end).format("DD/MM/YYYY HH:mm"));
+            }
+
+            $("#btnSave").click(function () {
+                var event = {
+                    Title: $("#inputTitle").val(),
+                    StartDate: $("#inputStartDate").val(),
+                    EndDate: $("#inputEndDate").val(),
+                    Color: $("#inputColor").val(),
+                };
+
+                $.ajax({
+                    type: "POST",
+                    url: "/Events/AddEvent",
+                    data: event,
+                    success: function (response) {
+                        $("#addEvent").modal("hide");
+                        getEvents();
+                        alertify.success("Etkinlik başarıyla eklendi");
+                    },
+                    error: function (error) {
+                        $("#addEvent").modal("hide");
+                        alertify.error("Hata");
+
+                    }
+
+                });
+            });
+
+            function getEvents() {
+                $.ajax({
+                    type: "GET",
+                    url: "/Events/GetEvents",
+                    success: function (response) {
+                        var sources = calendar.getEventSources();
+                        var events = [];
+
+                        for (var i = 0; i < sources.length; i++) {
+                            sources[i].remove();
+                        }
+
+                        for (var i = 0; i < response.length; i++) {
+                            events.push({
+                                start: response[i].startDate,
+                                end: response[i].endDate,
+                                title: response[i].title,
+                                color: response[i].color,
+                                id: response[i].id,
+                                appUserId: response[i].appUserId
+                            });
+                        }
+
+                        calendar.addEventSource(events);
+
+                    }
+                });
+            }
+
+            function updateEvents(event) {
+                $.ajax({
+                    type: "POST",
+                    url: "/Events/UpdateEvent",
+                    data: event,
+                    success: function (response) {
+                        getEvents();
+                        alertify.success("Etkinlik başarıyla güncellendi");
+                    },
+                    error: function (error) {
+                        alertify.error("Hata");
+
+                    }
+
+                });
+            }
+
+            $("#btnDelete").click(function () {
+                $.ajax({
+                    type: "POST",
+                    url: "/Events/DeleteEvent",
+                    data: deletedEvent,
+                    success: function (response) {
+                        $("#deleteModal").modal("hide");
+                        getEvents();
+                        alertify.success("Etkinlik başarıyla silindi");
+                    },
+                    error: function (error) {
+                        alertify.error("Hata");
+
+                    }
+                });
+
+            });
+
+        });
+    </script>
+}

@@ -1,0 +1,55 @@
+﻿@model UserSignInDto
+
+@{
+    Layout = "~/Views/Shared/_LoginLayout.cshtml";
+    ViewBag.Title = "Login";
+}
+
+
+<div class="d-md-flex half">
+    <div class="bg" style="background-image: url('/loginTheme/images/logInImg.jpg');
+    "></div>
+    <div class="contents">
+
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-md-12">
+                    <div class="form-block mx-auto">
+                        <div class="text-center mb-5">
+                            <h3 class="text-capitalize"><strong>Giriş</strong></h3>
+                        </div>
+                        <form asp-action="LogIn" asp-controller="Home" method="post">
+                            <div class="form-group first">
+                                <label for="username">Kullanıcı Adı</label>
+                                <span class="text-danger ml-1" asp-validation-for="UserName"></span>
+                                <input type="text" class="form-control" asp-for="UserName" id="username">
+                            </div>
+                            <div class="form-group last mb-3">
+                                <label for="password">Parola</label>
+                                <span class="text-danger ml-1" asp-validation-for="Password"></span>
+                                <input type="password" class="form-control" asp-for="Password" id="password">
+                            </div>
+
+                            <div class="d-sm-flex mb-5 align-items-center">
+                                <label class="control control--checkbox mb-3 mb-sm-0">
+                                    <span class="caption">Oturumu Açık Tut</span>
+                                    <input type="checkbox" checked="checked" />
+                                    <div class="control__indicator"></div>
+                                </label>
+                            </div>
+                            <div class="text-danger my-1" asp-validation-summary="ModelOnly"></div>
+                            <input type="submit" value="Giriş Yap" class="btn btn-block py-2 btn-primary">
+                            <a class="btn btn-block py-2 btn-success text-white" asp-action="Register">Kayıt Ol</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+@section Scripts{
+    <script src="~/jquery-validate/jquery.validate.js"></script>
+    <script src="~/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}

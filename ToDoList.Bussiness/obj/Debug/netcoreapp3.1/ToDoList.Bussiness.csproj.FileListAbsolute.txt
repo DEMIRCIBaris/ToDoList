@@ -1,0 +1,16 @@
+C:\Users\Sezer\Desktop\ToDoList\ToDoList.Bussiness\bin\Debug\netcoreapp3.1\ToDoList.Bussiness.deps.json
+C:\Users\Sezer\Desktop\ToDoList\ToDoList.Bussiness\bin\Debug\netcoreapp3.1\ToDoList.Bussiness.dll
+C:\Users\Sezer\Desktop\ToDoList\ToDoList.Bussiness\bin\Debug\netcoreapp3.1\ToDoList.Bussiness.pdb
+C:\Users\Sezer\Desktop\ToDoList\ToDoList.Bussiness\bin\Debug\netcoreapp3.1\ToDoList.Core.dll
+C:\Users\Sezer\Desktop\ToDoList\ToDoList.Bussiness\bin\Debug\netcoreapp3.1\ToDoList.DataAccess.dll
+C:\Users\Sezer\Desktop\ToDoList\ToDoList.Bussiness\bin\Debug\netcoreapp3.1\ToDoList.Entities.dll
+C:\Users\Sezer\Desktop\ToDoList\ToDoList.Bussiness\bin\Debug\netcoreapp3.1\ToDoList.Core.pdb
+C:\Users\Sezer\Desktop\ToDoList\ToDoList.Bussiness\bin\Debug\netcoreapp3.1\ToDoList.DataAccess.pdb
+C:\Users\Sezer\Desktop\ToDoList\ToDoList.Bussiness\bin\Debug\netcoreapp3.1\ToDoList.Entities.pdb
+C:\Users\Sezer\Desktop\ToDoList\ToDoList.Bussiness\obj\Debug\netcoreapp3.1\ToDoList.Bussiness.csprojAssemblyReference.cache
+C:\Users\Sezer\Desktop\ToDoList\ToDoList.Bussiness\obj\Debug\netcoreapp3.1\ToDoList.Bussiness.AssemblyInfoInputs.cache
+C:\Users\Sezer\Desktop\ToDoList\ToDoList.Bussiness\obj\Debug\netcoreapp3.1\ToDoList.Bussiness.AssemblyInfo.cs
+C:\Users\Sezer\Desktop\ToDoList\ToDoList.Bussiness\obj\Debug\netcoreapp3.1\ToDoList.Bussiness.csproj.CoreCompileInputs.cache
+C:\Users\Sezer\Desktop\ToDoList\ToDoList.Bussiness\obj\Debug\netcoreapp3.1\ToDoList.Bussiness.csproj.CopyComplete
+C:\Users\Sezer\Desktop\ToDoList\ToDoList.Bussiness\obj\Debug\netcoreapp3.1\ToDoList.Bussiness.dll
+C:\Users\Sezer\Desktop\ToDoList\ToDoList.Bussiness\obj\Debug\netcoreapp3.1\ToDoList.Bussiness.pdb

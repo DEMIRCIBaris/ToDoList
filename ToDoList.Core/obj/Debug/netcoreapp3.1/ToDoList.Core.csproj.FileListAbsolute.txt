@@ -1,0 +1,11 @@
+C:\Users\Sezer\Desktop\ToDoList\ToDoList.Core\bin\Debug\netcoreapp3.1\ToDoList.Core.deps.json
+C:\Users\Sezer\Desktop\ToDoList\ToDoList.Core\bin\Debug\netcoreapp3.1\ToDoList.Core.runtimeconfig.json
+C:\Users\Sezer\Desktop\ToDoList\ToDoList.Core\bin\Debug\netcoreapp3.1\ToDoList.Core.runtimeconfig.dev.json
+C:\Users\Sezer\Desktop\ToDoList\ToDoList.Core\bin\Debug\netcoreapp3.1\ToDoList.Core.dll
+C:\Users\Sezer\Desktop\ToDoList\ToDoList.Core\bin\Debug\netcoreapp3.1\ToDoList.Core.pdb
+C:\Users\Sezer\Desktop\ToDoList\ToDoList.Core\obj\Debug\netcoreapp3.1\ToDoList.Core.AssemblyInfoInputs.cache
+C:\Users\Sezer\Desktop\ToDoList\ToDoList.Core\obj\Debug\netcoreapp3.1\ToDoList.Core.AssemblyInfo.cs
+C:\Users\Sezer\Desktop\ToDoList\ToDoList.Core\obj\Debug\netcoreapp3.1\ToDoList.Core.csproj.CoreCompileInputs.cache
+C:\Users\Sezer\Desktop\ToDoList\ToDoList.Core\obj\Debug\netcoreapp3.1\ToDoList.Core.dll
+C:\Users\Sezer\Desktop\ToDoList\ToDoList.Core\obj\Debug\netcoreapp3.1\ToDoList.Core.pdb
+C:\Users\Sezer\Desktop\ToDoList\ToDoList.Core\obj\Debug\netcoreapp3.1\ToDoList.Core.genruntimeconfig.cache

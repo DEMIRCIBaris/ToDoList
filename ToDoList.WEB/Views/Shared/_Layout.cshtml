@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ToDoList.WEB</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="~/lib/alertify/alertify.bootstrap.min.css" rel="stylesheet" />
+    <link href="~/lib/alertify/alertify.core.min.css" rel="stylesheet" />
+    <link href="~/lib/fonts/css/all.min.css" rel="stylesheet" />
+    @RenderSection("Styles", required: false)
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-controller="Events" asp-action="Index">To Do List</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-1">
+                        @if (User.Identity.IsAuthenticated)
+                        {
+
+                            <li class="nav-item  ml-auto">
+                                <span  class="nav-link text-white">Hoşgeldin @User.Identity.Name</span>
+                            </li>
+                            <li class="nav-item  ml-auto">
+                                <a class="nav-link text-white" asp-controller="Home" asp-action="LogOut">Log Out</a>
+                            </li>
+                        }
+                    </ul>
+                  
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <script src="~/lib/fonts/js/all.min.js"></script>
+    <script src="~/lib/alertify/alertify.min.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

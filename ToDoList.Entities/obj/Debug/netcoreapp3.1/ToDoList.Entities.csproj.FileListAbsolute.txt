@@ -1,0 +1,12 @@
+C:\Users\Sezer\Desktop\ToDoList\ToDoList.Entities\bin\Debug\netcoreapp3.1\ToDoList.Entities.deps.json
+C:\Users\Sezer\Desktop\ToDoList\ToDoList.Entities\bin\Debug\netcoreapp3.1\ToDoList.Entities.dll
+C:\Users\Sezer\Desktop\ToDoList\ToDoList.Entities\bin\Debug\netcoreapp3.1\ToDoList.Entities.pdb
+C:\Users\Sezer\Desktop\ToDoList\ToDoList.Entities\bin\Debug\netcoreapp3.1\ToDoList.Core.dll
+C:\Users\Sezer\Desktop\ToDoList\ToDoList.Entities\bin\Debug\netcoreapp3.1\ToDoList.Core.pdb
+C:\Users\Sezer\Desktop\ToDoList\ToDoList.Entities\obj\Debug\netcoreapp3.1\ToDoList.Entities.csprojAssemblyReference.cache
+C:\Users\Sezer\Desktop\ToDoList\ToDoList.Entities\obj\Debug\netcoreapp3.1\ToDoList.Entities.AssemblyInfoInputs.cache
+C:\Users\Sezer\Desktop\ToDoList\ToDoList.Entities\obj\Debug\netcoreapp3.1\ToDoList.Entities.AssemblyInfo.cs
+C:\Users\Sezer\Desktop\ToDoList\ToDoList.Entities\obj\Debug\netcoreapp3.1\ToDoList.Entities.csproj.CoreCompileInputs.cache
+C:\Users\Sezer\Desktop\ToDoList\ToDoList.Entities\obj\Debug\netcoreapp3.1\ToDoList.Entities.csproj.CopyComplete
+C:\Users\Sezer\Desktop\ToDoList\ToDoList.Entities\obj\Debug\netcoreapp3.1\ToDoList.Entities.dll
+C:\Users\Sezer\Desktop\ToDoList\ToDoList.Entities\obj\Debug\netcoreapp3.1\ToDoList.Entities.pdb

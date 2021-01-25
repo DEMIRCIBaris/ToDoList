@@ -1,0 +1,17 @@
+C:\Users\Sezer\Desktop\ToDoList\ToDoList.DataAccess\bin\Debug\netcoreapp3.1\ToDoList.DataAccess.deps.json
+C:\Users\Sezer\Desktop\ToDoList\ToDoList.DataAccess\bin\Debug\netcoreapp3.1\ToDoList.DataAccess.runtimeconfig.json
+C:\Users\Sezer\Desktop\ToDoList\ToDoList.DataAccess\bin\Debug\netcoreapp3.1\ToDoList.DataAccess.runtimeconfig.dev.json
+C:\Users\Sezer\Desktop\ToDoList\ToDoList.DataAccess\bin\Debug\netcoreapp3.1\ToDoList.DataAccess.dll
+C:\Users\Sezer\Desktop\ToDoList\ToDoList.DataAccess\bin\Debug\netcoreapp3.1\ToDoList.DataAccess.pdb
+C:\Users\Sezer\Desktop\ToDoList\ToDoList.DataAccess\bin\Debug\netcoreapp3.1\ToDoList.Core.dll
+C:\Users\Sezer\Desktop\ToDoList\ToDoList.DataAccess\bin\Debug\netcoreapp3.1\ToDoList.Entities.dll
+C:\Users\Sezer\Desktop\ToDoList\ToDoList.DataAccess\bin\Debug\netcoreapp3.1\ToDoList.Core.pdb
+C:\Users\Sezer\Desktop\ToDoList\ToDoList.DataAccess\bin\Debug\netcoreapp3.1\ToDoList.Entities.pdb
+C:\Users\Sezer\Desktop\ToDoList\ToDoList.DataAccess\obj\Debug\netcoreapp3.1\ToDoList.DataAccess.csprojAssemblyReference.cache
+C:\Users\Sezer\Desktop\ToDoList\ToDoList.DataAccess\obj\Debug\netcoreapp3.1\ToDoList.DataAccess.AssemblyInfoInputs.cache
+C:\Users\Sezer\Desktop\ToDoList\ToDoList.DataAccess\obj\Debug\netcoreapp3.1\ToDoList.DataAccess.AssemblyInfo.cs
+C:\Users\Sezer\Desktop\ToDoList\ToDoList.DataAccess\obj\Debug\netcoreapp3.1\ToDoList.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Sezer\Desktop\ToDoList\ToDoList.DataAccess\obj\Debug\netcoreapp3.1\ToDoList.DataAccess.csproj.CopyComplete
+C:\Users\Sezer\Desktop\ToDoList\ToDoList.DataAccess\obj\Debug\netcoreapp3.1\ToDoList.DataAccess.dll
+C:\Users\Sezer\Desktop\ToDoList\ToDoList.DataAccess\obj\Debug\netcoreapp3.1\ToDoList.DataAccess.pdb
+C:\Users\Sezer\Desktop\ToDoList\ToDoList.DataAccess\obj\Debug\netcoreapp3.1\ToDoList.DataAccess.genruntimeconfig.cache
